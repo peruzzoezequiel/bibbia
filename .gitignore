@@ -1,0 +1,16 @@
+node_modules
+dist
+.vercel
+.DS_Store
+*.log
+
+# arquivos-fonte grandes e temporários (não precisam ir para o deploy)
+_tools/bibles/
+_tools/nt_raw/
+_tools/full.txt
+_tools/bible_raw.json
+_tools/translations.json
+_tools/*.txt
+_tools/*.m4a
+_tools/*.output
+_tools/dev.log

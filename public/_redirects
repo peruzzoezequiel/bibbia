@@ -1,0 +1,3 @@
+# SPA fallback (Netlify / Cloudflare Pages) — arquivos estáticos e páginas
+# prerenderizadas têm prioridade; só rotas sem arquivo caem no index.html.
+/*  /index.html  200

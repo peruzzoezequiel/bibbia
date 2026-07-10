@@ -1,0 +1,13 @@
+{
+  "name": "Bíblia King James 1611",
+  "short_name": "Bíblia",
+  "description": "Leitura da Bíblia King James 1611 em português, com busca e áudio.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf8f3",
+  "theme_color": "#8a6d3b",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget",
+      "Bash(npm -v)",
+      "Bash(mkdir -p _tools)",
+      "Bash(npm init *)",
+      "Bash(npm i *)",
+      "Bash(node -e ' *)",
+      "Bash(npm install *)",
+      "Bash(curl -s -m 25 \"https://api.getbible.net/v2/almeida/40.json\" -o /Users/ezequielperuzzo/DEV/site_biblia/_tools/nt_test.json)",
+      "Bash(echo \"exit:$?\")",
+      "Bash(curl -s -m 40 \"https://api.getbible.net/v2/almeida/40.json\" -o /Users/ezequielperuzzo/DEV/site_biblia/_tools/nt_test.json)",
+      "Bash(curl -s -m 40 \"https://api.getbible.net/v2/almeida/40.json\" -o /Users/ezequielperuzzo/DEV/site_biblia/_tools/nt_raw/40.json)",
+      "Bash(say -v '?')",
+      "Bash(printf \"No princípio Deus criou o céu e a terra. E a terra era sem forma e vazia.\")",
+      "Bash(say -v Luciana -f sample.txt -o sample.m4a)",
+      "Bash(ls -la sample.m4a)",
+      "Bash(file sample.m4a)",
+      "Bash(say --data-format=?)",
+      "Bash(say -v Luciana -f sample.txt -o s_aac.m4a --data-format=aac)",
+      "Bash(echo \"aac exit:$?\")",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(say -v Luciana -f sample.txt -o s_aac2.m4a --file-format=m4af --data-format=aac)",
+      "Bash(echo \"aac2 exit:$?\")",
+      "Bash(node _tools/gen-sitemap.mjs)",
+      "Bash(npm run *)",
+      "Bash(curl -s -m 40 \"https://api.getbible.net/v2/translations.json\" -o /Users/ezequielperuzzo/DEV/site_biblia/_tools/translations.json)",
+      "Bash(awk '{print $5, $NF}')",
+      "Bash(node _tools/gen-og.mjs)",
+      "Bash(awk '{print $5\" bytes\", $NF}')"
+    ]
+  }
+}
