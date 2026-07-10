@@ -162,12 +162,26 @@
 .reader { flex: 1; overflow-y: auto; display: flex; flex-direction: column; }
 
 .chapter-strip {
-  display: flex; flex-wrap: wrap; gap: 5px;
-  padding: 14px 20px; max-width: 760px; width: 100%;
-  margin: 0 auto;
+  max-width: 760px; width: 100%; margin: 0 auto;
+  padding: 8px 20px 12px;
   border-bottom: 1px solid var(--border);
   position: sticky; top: 0; background: var(--bg); z-index: 5;
 }
+.chapter-strip.collapsed { padding-bottom: 8px; }
+.cs-toggle {
+  display: flex; align-items: center; gap: 8px;
+  background: none; border: none; color: var(--text-2);
+  padding: 6px 4px; border-radius: 8px;
+}
+.cs-toggle:hover { color: var(--text); }
+.cs-label { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+.cs-current {
+  display: inline-grid; place-items: center; min-width: 24px; height: 22px; padding: 0 6px;
+  background: var(--text); color: var(--bg); border-radius: 6px; font-size: 12px; font-weight: 500;
+}
+.cs-chev { transition: transform .2s; }
+.chapter-strip.collapsed .cs-chev { transform: rotate(-90deg); }
+.chapter-chips { display: flex; flex-wrap: wrap; gap: 5px; padding-top: 8px; }
 .chip {
   width: 30px; height: 30px; border-radius: 8px;
   font-size: 13px; color: var(--text-2);

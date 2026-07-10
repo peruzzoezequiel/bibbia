@@ -124,7 +124,11 @@ export default function Reader({ lang, tr, book, books, chapter, settings, updat
 
   return (
     <div className="reader" ref={scrollRef}>
-      <ChapterStrip lang={lang} book={book} current={safeChapter} navigate={navigate} />
+      <ChapterStrip
+        lang={lang} book={book} current={safeChapter} navigate={navigate} tr={tr}
+        collapsed={settings.chaptersCollapsed}
+        onToggle={() => update({ chaptersCollapsed: !settings.chaptersCollapsed })}
+      />
 
       <div className="reader-inner">
         <AudioBar audio={audio} tr={tr} verses={verses || []} lang={lang} book={book} chapter={safeChapter} />
@@ -297,18 +301,30 @@ function VerseActions({ lang, tr, book, chapter, verse, text, version, isFav, th
   )
 }
 
-function ChapterStrip({ lang, book, current, navigate }) {
+function ChapterStrip({ lang, book, current, navigate, collapsed, onToggle, tr }) {
   return (
-    <div className="chapter-strip">
-      {Array.from({ length: book.chapters }, (_, i) => i + 1).map((n) => (
-        <button
-          key={n}
-          className={`chip ${n === current ? 'active' : ''}`}
-          onClick={() => navigate(`/${lang}/${book.slug}/${n}`)}
-        >
-          {n}
-        </button>
-      ))}
+    <div className={`chapter-strip ${collapsed ? 'collapsed' : ''}`}>
+      <button className="cs-toggle" onClick={onToggle} aria-expanded={!collapsed} title={tr.chapters}>
+        <span className="cs-label">{tr.chapters}</span>
+        <span className="cs-current">{current}</span>
+        <svg className="cs-chev" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+      {!collapsed && (
+        <div className="chapter-chips">
+          {Array.from({ length: book.chapters }, (_, i) => i + 1).map((n) => (
+            <button
+              key={n}
+              className={`chip ${n === current ? 'active' : ''}`}
+              onClick={() => navigate(`/${lang}/${book.slug}/${n}`)}
+            >
+              {n}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   )
 }

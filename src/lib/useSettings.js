@@ -3,11 +3,12 @@ import { useState, useEffect, useCallback } from 'react'
 const KEY = 'biblia-settings'
 
 const defaults = {
-  themeMode: 'auto',   // 'auto' | 'light' | 'dark'
-  fontSize: 19,        // px
-  layout: 'paragraph', // 'paragraph' | 'lines'
+  themeMode: 'auto',       // 'auto' | 'light' | 'dark'
+  fontSize: 19,            // px
+  layout: 'paragraph',     // 'paragraph' | 'lines'
   serif: true,
-  compareLang: '',     // '' = off, else a language code shown side by side
+  compareLang: '',         // '' = off, else a language code shown side by side
+  chaptersCollapsed: false, // recolher a faixa de capítulos
 }
 
 // Daytime (06:00–17:59) → light, otherwise dark.
