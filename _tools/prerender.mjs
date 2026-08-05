@@ -16,7 +16,7 @@ const DATA = path.join(ROOT, 'public', 'data')
 const VERSIONS = {
   'pt-bkj':     { htmlLang: 'pt-BR', family: 'tr', versionOT: 'King James 1611', versionNT: 'Almeida' },
   'pt-livretr': { htmlLang: 'pt-BR', family: 'tr', version: 'Bíblia Livre (Texto Recebido)' },
-  'pt-almeida': { htmlLang: 'pt-BR', family: 'tr', version: 'Almeida' },
+  'pt-almeida': { htmlLang: 'pt-BR', family: 'tr', version: 'Almeida 1911' },
   'pt-livre':   { htmlLang: 'pt-BR', family: 'critical', version: 'Bíblia Livre' },
   'en-kjv':     { htmlLang: 'en', family: 'tr', version: 'King James Version' },
   'es-rv1909':  { htmlLang: 'es', family: 'tr', version: 'Reina-Valera 1909' },

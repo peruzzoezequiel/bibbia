@@ -15,7 +15,7 @@ export const LANGUAGE_CODES = Object.keys(LANGUAGES)
 const SELECTIONS = {
   'pt-bkj':     { lang: 'pt', label: 'King James 1611', family: 'tr', versionOT: 'King James 1611', versionNT: 'Almeida' },
   'pt-livretr': { lang: 'pt', label: 'Bíblia Livre · Texto Recebido', family: 'tr', version: 'Bíblia Livre (Texto Recebido)' },
-  'pt-almeida': { lang: 'pt', label: 'Almeida', family: 'tr', version: 'Almeida' },
+  'pt-almeida': { lang: 'pt', label: 'Almeida 1911 (grafia original)', family: 'tr', version: 'Almeida 1911' },
   'pt-livre':   { lang: 'pt', label: 'Bíblia Livre', family: 'critical', version: 'Bíblia Livre' },
   'en-kjv':     { lang: 'en', label: 'King James Version', family: 'tr', version: 'King James Version' },
   'es-rv1909':  { lang: 'es', label: 'Reina-Valera 1909', family: 'tr', version: 'Reina-Valera 1909' },
